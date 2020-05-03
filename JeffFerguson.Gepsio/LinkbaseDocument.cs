@@ -34,7 +34,7 @@ namespace JeffFerguson.Gepsio
         private string GetFullLinkbasePath(string ContainingDocumentUri, string LinkbaseDocFilename)
         {
             string FullPath;
-            if (LinkbaseDocFilename.StartsWith("http://") == true)
+            if (Uri.IsWellFormedUriString(LinkbaseDocFilename, UriKind.Absolute))
             {
                 return LinkbaseDocFilename;
             }

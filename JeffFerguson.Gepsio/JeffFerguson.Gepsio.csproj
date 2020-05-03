@@ -16,6 +16,7 @@
     <RepositoryUrl>https://github.com/JeffFerguson/gepsio/</RepositoryUrl>
     <AssemblyVersion>2.1.0.14</AssemblyVersion>
     <FileVersion>2.1.0.14</FileVersion>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

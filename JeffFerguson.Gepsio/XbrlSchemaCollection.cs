@@ -195,6 +195,8 @@ namespace JeffFerguson.Gepsio
                 { "http://xbrl.sec.gov/currency/2017-01-31", "https://xbrl.sec.gov/currency/2017/currency-2017-01-31.xsd" },
                 { "http://xbrl.sec.gov/dei/2012-01-31", "http://xbrl.sec.gov/dei/2012/dei-2012-01-31.xsd" },
                 { "http://xbrl.sec.gov/dei/2018-01-31", "https://xbrl.sec.gov/dei/2018/dei-2018-01-31.xsd" },
+                // see https://github.com/JeffFerguson/gepsio/issues/9
+                { "http://xbrl.sec.gov/dei/2019-01-31", "https://xbrl.sec.gov/dei/2019/dei-2019-01-31.xsd" },
                 { "http://xbrl.sec.gov/exch/2017-01-31", "http://xbrl.sec.gov/exch/2017/exch-2017-01-31.xsd" },
                 { "http://xbrl.sec.gov/exch/2018-01-31", "https://xbrl.sec.gov/exch/2018/exch-2018-01-31.xsd" },
                 { "http://xbrl.sec.gov/invest/2012-01-31", "http://xbrl.sec.gov/invest/2012/invest-2012-01-31.xsd" },

@@ -103,5 +103,12 @@ namespace JeffFerguson.Gepsio.Test.IssueTests
                 Assert.Fail();
             }
         }
+
+        [TestMethod]
+        public void VerifyFixForIssue28()
+        {
+            // Load Campbell Soup 2019 10-K
+            new XbrlDocument().Load("https://www.sec.gov/Archives/edgar/data/16732/000001673219000070/cpb-20190728.xml");
+        }
     }
 }
