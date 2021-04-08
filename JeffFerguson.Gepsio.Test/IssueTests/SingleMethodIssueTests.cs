@@ -159,6 +159,11 @@ namespace JeffFerguson.Gepsio.Test.IssueTests
             }
         }
 
+        [TestMethod]
+        public void VerifyFixForIssue28()
+        {
+            // Load Campbell Soup 2019 10-K
+            new XbrlDocument().Load("https://www.sec.gov/Archives/edgar/data/16732/000001673219000070/cpb-20190728.xml");
         /// <summary>
         /// Ensure that the taxonomy at http://xbrl.fasb.org/us-gaap/2018/elts/us-gaap-2018-01-31.xsd
         /// can be loaded without exceptions.
