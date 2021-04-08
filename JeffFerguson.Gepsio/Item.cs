@@ -1,6 +1,7 @@
 ﻿using JeffFerguson.Gepsio.Xml.Interfaces;
 using JeffFerguson.Gepsio.Xsd;
 using System;
+using System.Globalization;
 using System.Text;
 
 namespace JeffFerguson.Gepsio
@@ -384,11 +385,11 @@ namespace JeffFerguson.Gepsio
         // Returns true if this Fact is Context Equal (c-equal) to a supplied fact, and false
         // otherwise. See section 4.10 of the XBRL 2.1 spec for more information.
         //------------------------------------------------------------------------------------
-        internal bool ContextEquals(Item OtherFact)
+        internal bool ContextEquals(Item OtherFact, XbrlFragment containingFragment)
         {
             if (Object.ReferenceEquals(this.ContextRef, OtherFact.ContextRef) == true)
                 return true;
-            return this.ContextRef.StructureEquals(OtherFact.ContextRef);
+            return this.ContextRef.StructureEquals(OtherFact.ContextRef, containingFragment);
         }
 
         //------------------------------------------------------------------------------------
@@ -552,7 +553,7 @@ namespace JeffFerguson.Gepsio
 
         private double GetRoundedValue()
         {
-            double RoundedValue = Convert.ToDouble(this.Value);
+            double RoundedValue = Convert.ToDouble(this.Value, CultureInfo.InvariantCulture);
             return Round(RoundedValue);
         }
 
