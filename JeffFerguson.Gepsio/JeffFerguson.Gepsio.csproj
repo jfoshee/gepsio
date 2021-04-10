@@ -38,4 +38,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Unplugged.Core.Synchronization" Version="1.0.0.1" />
+  </ItemGroup>
+
 </Project>
