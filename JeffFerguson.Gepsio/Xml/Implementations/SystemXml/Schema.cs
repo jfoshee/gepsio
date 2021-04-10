@@ -51,7 +51,8 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXml
         }
 
         public bool Read(string path)
-        {            
+        {
+            SecResourceControl.Wait(path);
             try
             {
                 var schemaReader = XmlTextReader.Create(path);

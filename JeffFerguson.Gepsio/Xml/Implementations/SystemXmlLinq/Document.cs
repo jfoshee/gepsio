@@ -18,6 +18,7 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXmlLinq
 
         public void Load(string path)
         {
+            SecResourceControl.Wait(path);
             doc = XDocument.Load(path, LoadOptions.SetBaseUri);
         }
 
@@ -40,6 +41,7 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXmlLinq
 
         private async Task LoadUriAsync(string path)
         {
+            SecResourceControl.Wait(path);
             var req = WebRequest.Create(path);
             using (Stream stream = req.GetResponse().GetResponseStream())
             {

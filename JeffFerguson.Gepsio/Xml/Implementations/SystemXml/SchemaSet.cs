@@ -75,6 +75,7 @@ namespace JeffFerguson.Gepsio.Xml.Implementation.SystemXml
         public void Add(ISchema schemaToAdd)
         {
             var schemaImplementation = schemaToAdd as Schema;
+            SecResourceControl.Wait(schemaImplementation.XmlSchema.SourceUri);
             thisSchemaSet.Add(schemaImplementation.XmlSchema);
         }
 

@@ -174,6 +174,7 @@ namespace JeffFerguson.Gepsio
         /// </param>
         public void Load(string Filename)
         {
+            SecResourceControl.Wait(Filename);
             var SchemaValidXbrl = Container.Resolve<IDocument>();
             SchemaValidXbrl.Load(Filename);
             this.Filename = Filename;
@@ -200,6 +201,7 @@ namespace JeffFerguson.Gepsio
         /// </param>
         public async Task LoadAsync(string Filename)
         {
+            SecResourceControl.Wait(Filename);
             var SchemaValidXbrl = Container.Resolve<IDocument>();
             await SchemaValidXbrl.LoadAsync(Filename);
             this.Filename = Filename;
